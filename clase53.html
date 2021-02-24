@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diferencia || Var - Let y Const ||</title>
+</head>
+<body>
+<script>
+  const fernando = {
+    nombre: 'Fernando',
+    apellido: 'Galdos'
+  }
+  function saludar(saludo = 'Hola') {
+    console.log(`${saludo}, mi nombre es ${this.nombre}`)
+  }
+  
+//Forma1 Usando Bind
+  const saludarAFernando = saludar.bind(fernando)
+// Forma2 Usando Call
+saludar.call(fernando, 'Hola!')
+
+//Forma3 Usando Apply
+saludar.apply(fernando, ['Hola!!'])
+
+
+</script>
+
+</body>
+</html>
